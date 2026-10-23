@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Normal Not Found</title>
+    <meta name="description" content="A futuristic, surreal cyber-experience based on the idea: Normal is the only feature this website doesn't have. Features interactive absurdities, the Login from Hell, Unreliable Calculator, Time Machine 404, and the Department of Unnecessary Problems." />
+    <meta property="og:title" content="404 Normal Not Found" />
+    <meta property="og:description" content="A futuristic, surreal cyber-experience based on the idea: Normal is the only feature this website doesn't have." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#06080e" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas id="cyber-canvas"></canvas>
+    <div class="scanline-overlay" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="#hero" class="brand-lockup" aria-label="404 Normal Not Found Home">
+            <span class="brand-icon">404</span>
+            <span class="brand-name">NORMAL NOT FOUND<span class="brand-accent">// OS.v404</span></span>
+          </a>
+
+          <nav class="nav-links" aria-label="Primary Navigation">
+            <a href="#hero" class="nav-link">Terminal</a>
+            <a href="#login-hell" class="nav-link">Login Hell</a>
+            <a href="#calculator" class="nav-link">Calculator</a>
+            <a href="#time-machine" class="nav-link">Time Machine</a>
+            <a href="#unnecessary-problems" class="nav-link">Problems Bureau</a>
+            <a href="#abnormal-browser" class="nav-link">NetScape 404</a>
+          </nav>
+
+          <div class="header-actions">
+            <button id="btn-normality-status" class="normality-gauge-button" title="Click to inspect normality level">
+              <span>⚡</span> <span class="gauge-label-full">NORMALITY: </span><span class="gauge-val">0.00%</span>
+            </button>
+            <button id="btn-audio-toggle" class="audio-toggle-btn" title="Toggle Synthesized Web Audio Sound Effects">
+              <span class="audio-icon">🔇</span> <span class="audio-label-text">SFX: OFF</span>
+            </button>
+            <button class="btn-restore btn-restore-normality" title="Instant Panic Reset: Restores baseline abnormality">
+              <span class="restore-label-full">RESTORE NORMALITY</span>
+              <span class="restore-label-mobile">RESET</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <nav class="mobile-nav-ribbon" aria-label="Quick Section Navigation">
+        <div class="mobile-nav-scroll">
+          <a href="#hero" class="mobile-nav-chip">⚡ Terminal</a>
+          <a href="#login-hell" class="mobile-nav-chip">🔒 Login Hell</a>
+          <a href="#calculator" class="mobile-nav-chip">🧮 Calculator</a>
+          <a href="#time-machine" class="mobile-nav-chip">🌀 Time Machine</a>
+          <a href="#unnecessary-problems" class="mobile-nav-chip">⚖️ Problems</a>
+          <a href="#abnormal-browser" class="mobile-nav-chip">🌐 NetScape 404</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <div class="hero-kicker-strip">
+            <span>●</span> Critical Anomaly: Standard Baseline Revoked
+          </div>
+
+          <div class="hero-title-stage">
+            <h1 class="hero-title glitch-text" data-text="404 NORMAL NOT FOUND">
+              404 NORMAL NOT FOUND
+            </h1>
+
+            <div id="sticky-it-memo" class="sticky-note" tabindex="0" title="Click and drag me!">
+              <div class="sticky-pin" aria-hidden="true"></div>
+              <div class="sticky-memo-title">⚠️ MEMO TO IT:</div>
+              <div class="sticky-memo-text">
+                • Do NOT click the pink button.<br>
+                • Apologize to the Wi-Fi router.<br>
+                • Normality remains discontinued.
+              </div>
+            </div>
+          </div>
+
+          <p class="hero-subtitle">
+            <em>“Error: Normality has been discontinued. Would you like to make things worse?”</em>
+          </p>
+
+          <div class="hero-cta-group">
+            <button id="btn-hero-fix" class="btn-hero btn-hero-fix">
+              <span>🛠️</span> FIX EVERYTHING
+            </button>
+            <button id="btn-hero-worse" class="btn-hero btn-hero-worse">
+              <span>🚨</span> MAKE IT WORSE
+            </button>
+            <button id="btn-hero-find" class="btn-hero btn-hero-find">
+              <span>🔍</span> FIND NORMAL
+            </button>
+          </div>
+
+          <div class="telemetry-strip" aria-label="Live System Telemetry">
+            <div class="telemetry-item">
+              <span class="telemetry-label">Normality Level</span>
+              <span id="telemetry-normality" class="telemetry-value accent-cyan tabular-nums">0.00%</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">Active Anomalies</span>
+              <span id="telemetry-anomalies" class="telemetry-value accent-pink tabular-nums">17</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">Sanity Status</span>
+              <span class="telemetry-value accent-yellow">FAILED</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">System Disposition</span>
+              <span class="telemetry-value accent-purple">Menacing</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="login-hell" class="section-block">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-index">EXPERIENCE 01 // AUTHENTICATION</span>
+            <h2 class="section-title">Login from Hell</h2>
+            <p class="section-desc">
+              A fictional security simulator featuring impossible password requirements, a brutally judgmental strength meter, and guaranteed rejection.
+            </p>
+          </div>
+
+          <div class="os-window highlight-pink">
+            <div class="window-titlebar">
+              <div class="window-dots">
+                <span class="window-dot close"></span>
+                <span class="window-dot minimize"></span>
+                <span class="window-dot maximize"></span>
+              </div>
+              <span class="window-title">LOGIN_AUTH_v404.exe — AUTHORIZED PERSONNEL FORBIDDEN</span>
+              <span class="window-status">ENCRYPTED (POORLY)</span>
+            </div>
+
+            <div class="window-body">
+              <div class="login-container">
+                <form id="login-hell-form" autocomplete="off">
+                  <div class="form-group">
+                    <label for="login-username" class="form-label">
+                      <span>Username</span>
+                      <span class="form-label-hint">No real credentials</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="login-username"
+                      class="cyber-input"
+                      placeholder="e.g. quantum_potato"
+                      maxlength="30"
+                      required
+                    />
+                    <div id="username-feedback" class="input-feedback">
+                      Enter username (prepare to be judged)
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="login-password" class="form-label">
+                      <span>Impossible Password</span>
+                      <span class="form-label-hint">Shifting security matrix</span>
+                    </label>
+                    <input
+                      type="password"
+                      id="login-password"
+                      class="cyber-input"
+                      placeholder="••••••••••••"
+                      autocomplete="new-password"
+                      required
+                    />
+
+                    <div class="strength-meter-wrap">
+                      <div class="strength-bar-track">
+                        <div id="strength-bar-fill" class="strength-bar-fill"></div>
+                      </div>
+                      <div class="strength-judgment-label">
+                        <span>Security Verdict:</span>
+                        <span id="strength-judgment-text" class="strength-judgment-text">Awaiting regret...</span>
+                      </div>
+                    </div>
+
+                    <div class="rules-card">
+                      <div class="rules-card-title">
+                        <span>⚡</span> CURRENT MANDATORY CRITERIA:
+                      </div>
+                      <div id="active-password-rule" class="active-rule-text">
+                        Rule 1: Password must contain an apology to your keyboard.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="captcha-box">
+                    <span class="captcha-label">Humanity Verification: Catch the button</span>
+                    <button type="button" id="captcha-dodge-btn" class="captcha-target-btn">
+                      I Am Not A Toaster
+                    </button>
+                  </div>
+
+                  <button type="submit" id="btn-submit-login" class="btn-submit-auth">
+                    <span>🔒</span> Authenticate into Oblivion
+                  </button>
+                </form>
+
+                <div class="login-sidebar">
+                  <div class="rejection-log-card">
+                    <span class="rejection-badge">Live Server Response</span>
+                    <div id="rejection-message-box" class="rejection-message-box">
+                      Status: Idle. Enter any password to experience our cutting-edge rejection algorithms.
+                    </div>
+                    <p class="disclaimer-note">
+                      * Strictly a fictional, harmless client-side entertainment simulator. Never enter real passwords or personal information.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="calculator" class="section-block">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-index">EXPERIENCE 02 // ARITHMETIC WITH ATTITUDE</span>
+            <h2 class="section-title">The Unreliable Calculator</h2>
+            <p class="section-desc">
+              A fully working arithmetic engine that produces 100% mathematically accurate calculations, but insists on delivering unsolicited sarcastic commentary.
+            </p>
+          </div>
+
+          <div class="os-window highlight-yellow">
+            <div class="window-titlebar">
+              <div class="window-dots">
+                <span class="window-dot close"></span>
+                <span class="window-dot minimize"></span>
+                <span class="window-dot maximize"></span>
+              </div>
+              <span class="window-title">CALC_CORE_SARCASTIC.app — 100% PRECISION, 100% SASS</span>
+              <span class="window-status">ONLINE</span>
+            </div>
+
+            <div class="window-body">
+              <div class="calc-layout">
+                <div class="calculator-hardware">
+                  <div class="calc-screen">
+                    <div id="calc-prev" class="calc-prev-expr"></div>
+                    <div id="calc-current" class="calc-current-val tabular-nums">0</div>
+                    <div id="calc-sarcasm" class="calc-sarcasm-ticker">
+                      Awaiting your mathematical audacity...
+                    </div>
+                  </div>
+
+                  <div class="calc-keypad">
+                    <button class="calc-key clear" data-action="clear" data-order="1">AC</button>
+                    <button class="calc-key op" data-action="negate" data-order="2">+/-</button>
+                    <button class="calc-key op" data-action="percent" data-order="3">%</button>
+                    <button class="calc-key op" data-action="op" data-val="/" data-order="4">÷</button>
+
+                    <button class="calc-key" data-action="number" data-val="7" data-order="5">7</button>
+                    <button class="calc-key" data-action="number" data-val="8" data-order="6">8</button>
+                    <button class="calc-key" data-action="number" data-val="9" data-order="7">9</button>
+                    <button class="calc-key op" data-action="op" data-val="*" data-order="8">×</button>
+
+                    <button class="calc-key" data-action="number" data-val="4" data-order="9">4</button>
+                    <button class="calc-key" data-action="number" data-val="5" data-order="10">5</button>
+                    <button class="calc-key" data-action="number" data-val="6" data-order="11">6</button>
+                    <button class="calc-key op" data-action="op" data-val="-" data-order="12">−</button>
+
+                    <button class="calc-key" data-action="number" data-val="1" data-order="13">1</button>
+                    <button class="calc-key" data-action="number" data-val="2" data-order="14">2</button>
+                    <button class="calc-key" data-action="number" data-val="3" data-order="15">3</button>
+                    <button class="calc-key op" data-action="op" data-val="+" data-order="16">+</button>
+
+                    <button class="calc-key span-2" data-action="number" data-val="0" data-order="17">0</button>
+                    <button class="calc-key" data-action="decimal" data-order="18">.</button>
+                    <button class="calc-key equals" data-action="equals" data-order="19">=</button>
+                  </div>
+                </div>
+
+                <div class="calc-side-deck">
+                  <div class="calc-controls-card">
+                    <div class="calc-toggle-row">
+                      <label for="toggle-calc-sarcasm" class="calc-toggle-label">Sarcastic Commentary Engine</label>
+                      <input type="checkbox" id="toggle-calc-sarcasm" checked style="accent-color: var(--neon-yellow);" />
+                    </div>
+                    <button id="btn-shuffle-keys" class="btn-generate-anomaly" style="margin-top: 0.5rem;">
+                      Jumble Keypad (Prank Mode)
+                    </button>
+                  </div>
+
+                  <div class="calc-tape-card">
+                    <div class="calc-tape-title">
+                      <span>CALCULATION TAPE</span>
+                      <span style="font-size: 0.7rem; color: var(--text-dim);">LAST 10 RUNS</span>
+                    </div>
+                    <ul id="calc-tape-list" class="calc-tape-list">
+                      <li class="calc-tape-item">
+                        <div class="tape-math"><span>404 + 0</span><strong>= 404</strong></div>
+                        <div class="tape-snark">"Normal not found, as promised."</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="time-machine" class="section-block">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-index">EXPERIENCE 03 // TEMPORAL DIVERGENCE</span>
+            <h2 class="section-title">Time Machine 404</h2>
+            <p class="section-desc">
+              Navigate bizarre epochs, validate dates, and clearly distinguish verifiable historical events from absurd fictional timeline paradoxes.
+            </p>
+          </div>
+
+          <div class="os-window highlight-purple">
+            <div class="window-titlebar">
+              <div class="window-dots">
+                <span class="window-dot close"></span>
+                <span class="window-dot minimize"></span>
+                <span class="window-dot maximize"></span>
+              </div>
+              <span class="window-title">CHRONO_DISPLACEMENT_NAVIGATOR.sys</span>
+              <span class="window-status">QUANTUM LOCK ACTIVE</span>
+            </div>
+
+            <div class="window-body">
+              <div class="time-machine-wrap">
+                <div class="time-cockpit">
+                  <label class="form-label" style="margin-bottom: 0.65rem;">QUICK TEMPORAL PRESETS</label>
+                  <div class="time-presets-grid">
+                    <button class="btn-time-preset" data-year="-500">500 BCE</button>
+                    <button class="btn-time-preset" data-year="404">Year 404</button>
+                    <button class="btn-time-preset" data-year="1337">Year 1337</button>
+                    <button class="btn-time-preset" data-year="1999">Year 1999</button>
+                    <button class="btn-time-preset active" data-year="2026">Year 2026</button>
+                    <button class="btn-time-preset" data-year="2077">Year 2077</button>
+                    <button class="btn-time-preset" data-year="3042">Year 3042</button>
+                    <button class="btn-time-preset" data-year="9999">Year 9999</button>
+                  </div>
+
+                  <div class="time-inputs-row">
+                    <div>
+                      <label for="time-input-month" class="form-label">Month</label>
+                      <select id="time-input-month" class="cyber-input">
+                        <option value="1">January</option>
+                        <option value="4">April</option>
+                        <option value="7">July</option>
+                        <option value="10" selected>October</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="time-input-day" class="form-label">Day</label>
+                      <input type="number" id="time-input-day" class="cyber-input" value="23" min="1" max="31" />
+                    </div>
+                    <div>
+                      <label for="time-input-year" class="form-label">Year Coordinate</label>
+                      <input type="text" id="time-input-year" class="cyber-input" value="2026" />
+                    </div>
+                  </div>
+
+                  <button id="btn-engage-jump" class="btn-engage-jump">
+                    <span>🌀</span> ENGAGE TEMPORAL JUMP
+                  </button>
+                </div>
+
+                <div id="timeline-card-display" class="timeline-card">
+                  <div class="timeline-header">
+                    <span id="timeline-year-display" class="timeline-year-badge">Year 2026 CE</span>
+                    <span id="timeline-divergence-val" class="timeline-divergence">DIVERGENCE: 0.0% (Epicenter)</span>
+                  </div>
+
+                  <div class="timeline-body">
+                    <div class="timeline-fact-box">
+                      <span class="timeline-fact-label">✓ Historical Fact</span>
+                      <p id="timeline-fact-text" class="timeline-fact-text">
+                        Present Timeline: You are exploring an operating system where normality has been officially discontinued.
+                      </p>
+                    </div>
+
+                    <div class="timeline-paradox-box">
+                      <span class="timeline-paradox-label">⚠️ Fictional Timeline Paradox</span>
+                      <p id="timeline-paradox-text" class="timeline-paradox-text">
+                        Every time you attempt to fix everything, a parallel timeline is spawned where humans communicate solely via accordion solos.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="unnecessary-problems" class="section-block">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-index">EXPERIENCE 04 // BUREAUCRATIC PERFECTION</span>
+            <h2 class="section-title">The Department of Unnecessary Problems</h2>
+            <p class="section-desc">
+              Contradictory toggles, elusive runaway buttons, fake updates, unsolicited alerts, and a random weirdness identity generator.
+            </p>
+          </div>
+
+          <div class="bureau-grid">
+            <div class="bureau-card">
+              <h3 class="bureau-card-title"><span>⚖️</span> Paradox Toggles</h3>
+              <p class="bureau-card-desc">Toggling any switch actively sabotages the others according to bureaucratic protocol.</p>
+              
+              <div class="toggle-stack">
+                <div class="toggle-row">
+                  <span class="toggle-row-label">Toggle A: Increase Uncertainty</span>
+                  <input type="checkbox" id="toggle-problem-a" checked style="accent-color: var(--neon-cyan);" />
+                </div>
+                <div class="toggle-row">
+                  <span class="toggle-row-label">Toggle B: Confuse Toggle C</span>
+                  <input type="checkbox" id="toggle-problem-b" style="accent-color: var(--neon-pink);" />
+                </div>
+                <div class="toggle-row">
+                  <span class="toggle-row-label">Toggle C: Create Infinite Loop</span>
+                  <input type="checkbox" id="toggle-problem-c" style="accent-color: var(--neon-yellow);" />
+                </div>
+              </div>
+            </div>
+
+            <div class="bureau-card">
+              <h3 class="bureau-card-title"><span>🏃‍♂️</span> The Self-Preserving Button</h3>
+              <p class="bureau-card-desc">Programmed with an intense survival instinct. Try hovering over it.</p>
+              
+              <div id="runaway-arena" class="runaway-arena">
+                <button id="btn-runaway-problem" class="btn-runaway" style="left: 40%; top: 40%;">
+                  Don't Click Me!
+                </button>
+              </div>
+              <div class="runaway-counter">
+                Dodged attempts: <span id="runaway-counter-val" class="tabular-nums" style="color: var(--neon-yellow); font-weight: 700;">0</span>
+              </div>
+            </div>
+
+            <div class="bureau-card">
+              <h3 class="bureau-card-title"><span>📦</span> Unsolicited Updates & Alerts</h3>
+              <p class="bureau-card-desc">Install patches that fix zero bugs and spawn urgent notifications regarding your posture.</p>
+              
+              <div style="display: flex; gap: 0.75rem; flex-direction: column;">
+                <button id="btn-install-fake-update" class="btn-hero-find" style="width: 100%; justify-content: center; padding: 0.65rem;">
+                  <span>⬇️</span> Install Patch 404.99.01
+                </button>
+                <button id="btn-spawn-alert" class="btn-hero-worse" style="width: 100%; justify-content: center; padding: 0.65rem;">
+                  <span>🔔</span> Spawn Unnecessary Alert
+                </button>
+              </div>
+            </div>
+
+            <div class="bureau-card">
+              <h3 class="bureau-card-title"><span>🧬</span> Weirdness Identity Generator</h3>
+              <p class="bureau-card-desc">Synthesize random fictional personas with extraordinarily useless superpowers.</p>
+              
+              <div class="identity-badge-output">
+                <div id="identity-name" class="identity-name">Countess Mildred Bytecode</div>
+                <div id="identity-prof" class="identity-profession">Title: Professional Sock Divorcer</div>
+                <div class="identity-stat-row">
+                  <strong>Superpower:</strong> <span id="identity-power">Can communicate telepathically with dry cleaning receipts</span>
+                </div>
+                <div class="identity-stat-row">
+                  <strong>Weakness:</strong> <span id="identity-weakness">Sneezes whenever someone says the word "spreadsheet"</span>
+                </div>
+              </div>
+
+              <button id="btn-generate-anomaly" class="btn-generate-anomaly">
+                <span>⚡</span> Synthesize New Anomaly
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="abnormal-browser" class="section-block">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-index">MICRO-INTERACTION // SURFING THE DISCONTINUED WEB</span>
+            <h2 class="section-title">NetScape 404: Abnormal Browser</h2>
+            <p class="section-desc">
+              A simulated browser that queries locally defined search indexes and returns delightfully unhelpful results.
+            </p>
+          </div>
+
+          <div class="browser-chrome">
+            <div class="browser-toolbar">
+              <div class="browser-nav-btns">
+                <button class="browser-btn" aria-label="Back">‹</button>
+                <button class="browser-btn" aria-label="Forward">›</button>
+                <button class="browser-btn" aria-label="Refresh">↻</button>
+              </div>
+              <div class="browser-url-bar">
+                <span class="url-prefix">abnormal://</span>
+                <input
+                  type="text"
+                  id="browser-search-input"
+                  class="browser-search-input"
+                  value="how to fix everything"
+                  placeholder="Search the unhinged web..."
+                />
+              </div>
+              <button id="browser-go-btn" class="browser-go-btn">Search</button>
+            </div>
+
+            <div class="browser-content-area">
+              <div class="swipe-hint-header">
+                <span class="search-presets-label">Trending Queries:</span>
+                <span class="swipe-hint-pill swipe-hint-cyan"><span>↔</span> Swipe queries</span>
+              </div>
+              <div class="search-presets-row" tabindex="0" role="region" aria-label="Trending Queries Carousel">
+                <button class="preset-chip" data-query="how to fix everything">how to fix everything</button>
+                <button class="preset-chip" data-query="is normality covered by insurance">is normality covered by insurance</button>
+                <button class="preset-chip" data-query="why is my cat judging my css">why is my cat judging my css</button>
+                <button class="preset-chip" data-query="download extra ram into toaster">download extra ram into toaster</button>
+                <button class="preset-chip" data-query="recipe for existential dread">recipe for existential dread</button>
+                <button class="preset-chip" data-query="how to un-microwave a fork">how to un-microwave a fork</button>
+              </div>
+
+              <div id="browser-results-list" class="search-results-list">
+                <div class="search-result-item">
+                  <div class="result-url">https://abnormal.web/turn-off-on-earth</div>
+                  <div class="result-title">Have You Tried Turning the Planet Off and Back On?</div>
+                  <div class="result-snippet">A comprehensive 4-step guide to unplugging the solar system for 30 seconds and plugging it back in.</div>
+                </div>
+                <div class="search-result-item">
+                  <div class="result-url">https://repair.chaos/duct-tape-reality</div>
+                  <div class="result-title">Applying Digital Duct Tape to Emotional Syntax Errors</div>
+                  <div class="result-snippet">Why 99% of reality bugs can be resolved by ignoring them until they become someone else's problem.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; margin-bottom: 0.75rem;">
+            <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--neon-yellow); text-transform: uppercase; letter-spacing: 0.08em;">Discovered Anomalies</span>
+          </div>
+          <div class="achievements-grid">
+            <div class="achievement-card" data-achievement="dividedByZero">
+              <span class="achievement-icon">🕳️</span>
+              <div>
+                <div class="achievement-title">Black Hole Architect</div>
+                <div class="achievement-desc">Divided by zero on calculator</div>
+              </div>
+            </div>
+
+            <div class="achievement-card" data-achievement="dodgedButton">
+              <span class="achievement-icon">⚡</span>
+              <div>
+                <div class="achievement-title">Agile Evader</div>
+                <div class="achievement-desc">Dodged runaway button 5 times</div>
+              </div>
+            </div>
+
+            <div class="achievement-card" data-achievement="traveled404">
+              <span class="achievement-icon">🌀</span>
+              <div>
+                <div class="achievement-title">Error In Time</div>
+                <div class="achievement-desc">Navigated to Year 404</div>
+              </div>
+            </div>
+
+            <div class="achievement-card" data-achievement="konamiRave">
+              <span class="achievement-icon">🎉</span>
+              <div>
+                <div class="achievement-title">Retro Rave Connoisseur</div>
+                <div class="achievement-desc">Unlocked Konami disco secret</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand-bio">
+            <div class="brand-lockup">
+              <span class="brand-icon">404</span>
+              <span class="brand-name">NORMAL NOT FOUND</span>
+            </div>
+            <p class="footer-disclaimer">
+              “Normal is the only feature this website doesn't have.”<br>
+              Category: Certified Menace — Funniest / Most Annoying.
+            </p>
+          </div>
+
+          <div class="footer-links-group">
+            <div>
+              <div class="footer-col-title">Experiences</div>
+              <ul class="footer-links-list">
+                <li><a href="#login-hell">Login from Hell</a></li>
+                <li><a href="#calculator">Unreliable Calculator</a></li>
+                <li><a href="#time-machine">Time Machine 404</a></li>
+                <li><a href="#unnecessary-problems">Department of Problems</a></li>
+              </ul>
+            </div>
+            <div>
+              <div class="footer-col-title">Safety & Reset</div>
+              <ul class="footer-links-list">
+                <li><a href="#hero" class="btn-restore-normality">Restore Baseline</a></li>
+                <li><a href="#hero">Back to Top</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>ABNORMAL OS v404.0 — Certified Menace Edition</span>
+          <span>Made by Mohammad Kamran (2601CE43)</span>
+        </div>
+      </div>
+    </footer>
+
+    <div id="modal-generic" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <span id="modal-title" class="modal-title">SYSTEM_MODAL.exe</span>
+          <button class="modal-close-btn" onclick="window.closeModal()" aria-label="Close dialog">×</button>
+        </div>
+        <div id="modal-body" class="modal-body"></div>
+      </div>
+    </div>
+
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

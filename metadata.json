@@ -1,0 +1,6 @@
+{
+  "name": "404 Normal Not Found",
+  "description": "A futuristic, surreal cyber-experience based on the idea: Normal is the only feature this website doesn't have. Features interactive absurdities, the Login from Hell, Unreliable Calculator, Time Machine 404, and the Department of Unnecessary Problems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
