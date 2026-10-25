@@ -53,36 +53,7 @@ A futuristic, surreal cyber-experience crafted like an operating system that has
 2. **Zero Dependencies**: No React, Vue, Angular, jQuery, Tailwind runtime, Bootstrap, or external script libraries.
 3. **No Backend Required**: 100% client-side execution; runs offline or as a static site.
 4. **Privacy & Safety First**: Zero personal data collection, zero tracking, no spam, no trap loops, no autoplay sound.
-5. **Universal Accessibility**: WCAG AA contrast standards, keyboard navigation, focus rings (`:focus-visible`), and `prefers-reduced-motion` support.
-
----
-
-## 🚀 How to Run Locally
-
-### Option 1: Direct File Open (Zero Tools Needed)
-Simply double-click `index.html` or drag it into any modern web browser (Chrome, Firefox, Safari, Edge).
-
-### Option 2: Local HTTP Server (Python)
-```bash
-# Python 3
-python3 -m http.server 3000
-```
-Then visit `http://localhost:3000` in your browser.
-
-### Option 3: Node / NPX
-```bash
-npx serve .
-# or with the included Vite dev server:
-npm run dev
-```
-
----
-
-## 🌐 How to Deploy as a Static Site
-
-Because this project consists of standard `index.html`, `style.css`, and `script.js` files, it can be deployed to any static host with zero build configuration:
-- **GitHub Pages**: Push the repository and enable GitHub Pages on the `main` branch.
-- **Vercel / Netlify / Cloudflare Pages**: Drag and drop the folder or connect your Git repository.
+5. **Universal Accessibility**: WCAG AA contrast standards, keyboard navigation, focus rings (`:focus-visible`), and `prefers-reduced-motion` support
 
 ---
 
